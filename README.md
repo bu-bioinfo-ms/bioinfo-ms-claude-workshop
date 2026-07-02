@@ -1,5 +1,7 @@
 # Agentic Coding for Bioinformatics — Claude Code Workshop
 
+[Workshop slides](https://bu-bioinfo-ms.github.io/bioinfo-ms-claude-workshop/)
+
 A hands-on workshop introducing **agentic coding workflows** to Bioinformatics MS
 students, using [Claude Code](https://claude.com/claude-code) applied to real
 scientific and bioinformatics tasks.
