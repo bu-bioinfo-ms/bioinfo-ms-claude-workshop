@@ -6,15 +6,15 @@
 > on a different machine. **This is also a live demonstration of the workshop's
 > "make decisions visible and durable in markdown" principle.**
 
-- **Student:** _(your name — fill in during Module 0)_
-- **Model in use:** _(e.g. Opus 4.8 — recorded in Module 0)_
-- **Last session:** _(the guide stamps this)_
+- **Student:** Shu-Wen
+- **Model in use:** Opus 4.8
+- **Last session:** 2026-07-02 — Module 0 (getting started)
 
 ## Module checklist
 
 | # | Module | Status | Completed |
 |---|--------|--------|-----------|
-| 0 | Getting started (onboarding to the workshop) | ⬜ not started | — |
+| 0 | Getting started (onboarding to the workshop) | 🔄 in progress | — |
 | 1 | The workshop loop: plan → act → verify → record → commit → push | ⬜ not started | — |
 | 2 | Choosing your model | 🔒 locked | — |
 | 3 | Steering with modes: plan vs. auto | 🔒 locked | — |
