@@ -8,7 +8,7 @@ order — each builds on the last.
 |---|--------|-----------------|-------------------------------|
 | 0 | [Getting started](00-getting-started.md) | Forking, launching Claude Code, picking a model, meeting your guide | — |
 | 1 | [The workshop loop](01-the-workshop-loop.md) | plan → act → verify → record → commit, on a real bug | Verify-before-done (already seeded); one conventional-commit note |
-| 2 | Choosing your model | Matching Opus / Sonnet / Haiku + effort to the task | model-choice heuristic |
+| 2 | [Choosing your model](02-choosing-your-model.md) | Matching Opus / Sonnet / Haiku + effort to the task | model-choice heuristic |
 | 3 | Steering with modes | Plan mode vs. auto/accept-edits; when to let it run | when to require a plan |
 | 4 | Project memory: CLAUDE.md & skills | Reading & extending CLAUDE.md; authoring a tiny skill | project-specific rules |
 | 5 | Co-design & durable decisions | Designing with the agent; writing a decision record before coding | decision-record location |
@@ -28,6 +28,6 @@ open the repo any time, say "let's continue," and your guide resumes from
 
 ## Status of these materials
 
-Modules 0 and 1 are written. Modules 2–7 are outlined above and will be filled
-in as the workshop develops. (Building a module is itself a nice demonstration
-of co-design — see Module 5.)
+Modules 0, 1, and 2 are written. Modules 3–7 are outlined above and will be
+filled in as the workshop develops. (Building a module is itself a nice
+demonstration of co-design — see Module 5.)
