@@ -6,16 +6,16 @@
 > on a different machine. **This is also a live demonstration of the workshop's
 > "make decisions visible and durable in markdown" principle.**
 
-- **Student:** _(your name — fill in during Module 0)_
-- **Model in use:** _(e.g. Opus 4.8 — recorded in Module 0)_
-- **Last session:** _(the guide stamps this)_
+- **Student:** Shu-Wen
+- **Model in use:** Opus 4.8
+- **Last session:** 2026-07-02 — Module 0 (getting started)
 
 ## Module checklist
 
 | # | Module | Status | Completed |
 |---|--------|--------|-----------|
-| 0 | Getting started (onboarding to the workshop) | ⬜ not started | — |
-| 1 | The workshop loop: plan → act → verify → record → commit → push | ⬜ not started | — |
+| 0 | Getting started (onboarding to the workshop) | ✅ done | 2026-07-02 |
+| 1 | The workshop loop: plan → act → verify → record → commit → push | 🔄 in progress | — |
 | 2 | Choosing your model | 🔒 locked | — |
 | 3 | Steering with modes: plan vs. auto | 🔒 locked | — |
 | 4 | Project memory: CLAUDE.md & skills | 🔒 locked | — |
@@ -32,10 +32,11 @@ earlier modules first)
 > why you chose an approach), the guide records them here so they survive across
 > sessions. Add your own notes too.
 
-_(nothing yet)_
+- **Model:** Opus 4.8 — chosen for the teaching/reasoning-heavy workshop guidance (Module 0).
+- **How to resume:** open the repo in Claude Code and say "let's continue" (or `/workshop`); the guide reads `PROGRESS.md` and picks up at the next module.
 
 ## Session log
 
 > One line per working session, newest first. The guide appends here.
 
-_(nothing yet)_
+- 2026-07-02 — Shu-Wen's first session: completed Module 0 (name + model recorded, met the guide). Module 1 unlocked.
