@@ -18,6 +18,15 @@ order — each builds on the last.
 > **Appendix (optional):** Issue-driven feedback collection — using GitHub
 > issues to record and triage feedback. Out of the core path; do it if curious.
 
+## Presentation & background materials
+
+- **Slides:** [`docs/slides/`](../slides/) — Marp decks for live sessions
+  (render with `marp docs/slides/00-getting-started.md` or the "Marp for VS
+  Code" extension). Module 0's deck is written.
+- **Background:**
+  [`docs/background/llms-and-the-loop.md`](../background/llms-and-the-loop.md) —
+  a self-paced primer on LLMs, agents, and the loop.
+
 ## For today's live session (90 min)
 
 The goal today is **not** to finish the curriculum — it's to understand how to
