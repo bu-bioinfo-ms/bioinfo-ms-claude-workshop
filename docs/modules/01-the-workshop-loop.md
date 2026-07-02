@@ -43,13 +43,22 @@ Work *with* your guide — it drives the tools; you make the calls.
    ```
    python examples/gc-content/gc_content.py examples/gc-content/sample.fasta
    ```
-2. **Plan.** Ask the guide to switch to **plan mode** and propose a fix *without
-   editing yet*. Read the plan. Does it match your diagnosis (case-sensitivity)?
-   Approve or push back.
+2. **Plan.** Ask the guide to propose a fix *without editing yet*, and read it
+   before approving. Does it match your diagnosis (case-sensitivity)? Approve or
+   push back. (You can ask the guide to switch to **plan mode** for this — a
+   mode that proposes without touching files. If that feels unfamiliar, don't
+   worry: you'll practice plan mode deliberately in **Module 3**. For now, even
+   a plan presented inline is enough — the point is that you *see and approve*
+   the change before it happens.)
 3. **Act.** Let it apply the fix.
 4. **Verify.** This is the heart of the module. Add (or have the guide add) a
    test that would have caught the bug — e.g. that `gc_content("atgc") == 0.5` —
-   and **run it**. Green means done; red means keep going.
+   in `examples/gc-content/test_gc_content.py`, and **run it**. Use `pytest` if
+   it's installed (`pytest examples/gc-content/`); if not, a plain script that
+   `assert`s the cases and prints `PASS` is completely fine — the runner matters
+   far less than *seeing it go green*. Best practice: run the test against the
+   **unfixed** code first and watch it fail (red), then fix and watch it pass
+   (green). A test you never saw fail hasn't proven it can catch the bug.
 5. **Record, commit & push.** The guide records the decision in `PROGRESS.md`,
    makes one conventional commit, e.g.
    `fix(gc-content): count soft-masked (lowercase) bases in GC content`, and
@@ -61,6 +70,17 @@ Work *with* your guide — it drives the tools; you make the calls.
 - A test that exercises lowercase input **passes** (you saw it run).
 - There's a commit whose message follows the `type(scope): summary` form, and
   it's **pushed to your fork** (`git status` shows nothing to push).
+
+## Going deeper (optional)
+
+Once the test is green, it's worth asking your guide: **"what *else* could break
+here?"** The one-line fix (`.upper()`) is correct, but real sequences contain
+more than `a/c/g/t` — ambiguity codes like `N`, gap characters (`-`), or
+whitespace. What should GC content do with those? Are they in the denominator?
+Deciding that is a design choice, not a bug fix — a good taste of the kind of
+question Module 5 (co-design) is about. You don't have to change anything; just
+notice that "the test passes" and "the code is right for every input" aren't the
+same claim.
 
 ## Convention added to CLAUDE.md
 
