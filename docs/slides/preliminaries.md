@@ -55,9 +55,9 @@ it, skim and move on.
 By the end of this deck you should have:
 
 - ✅ A **GitHub account**
-- ✅ **Git** installed and working in a terminal
+- ✅ **Git** installed and working
 - ✅ **Python 3** installed (to run the example project)
-- ✅ **Claude Code** installed and signed in
+- ✅ **Claude Code** — the **Claude Desktop app** (our default) *or* the terminal CLI
 - ✅ A **text editor** (VS Code recommended, optional)
 
 <span class="small">And you'll understand five ideas: the terminal, version control, GitHub, forking, and cloning.</span>
@@ -157,6 +157,7 @@ git clone https://github.com/<your-username>/bioinfo-ms-claude-workshop.git
 ```
 
 - Fork first (on GitHub) → **then clone your fork** (to your machine).
+- Prefer no terminal? A GUI like **GitHub Desktop** clones with a button.
 - The clone remembers where it came from, so `git push` sends your commits back
   up to your fork.
 
@@ -217,19 +218,49 @@ make sure `python` or `python3` runs from their terminal.
 ## Tool 3 — Claude Code
 
 **Claude Code** is the agent you'll drive — it reads files, runs commands, edits
-code, and uses git, all from your terminal.
+code, and uses git for you. **Same engine, two ways to run it:**
 
-- Install & sign-in instructions: **[claude.com/claude-code](https://claude.com/claude-code)**
-- You'll need an account/subscription that includes it (check with the
-  instructors about access).
-- Launch it by opening a terminal **inside your cloned repo** and running its
-  command — it then reads the repo (including `CLAUDE.md`) and greets you.
+- 🖥️ **Claude Desktop app** — a graphical app. **This is what we use in the
+  workshop.**
+- ⌨️ **Terminal CLI** — the command-line version. A fine alternative if you
+  prefer the terminal.
 
-<span class="small">It's available in the terminal, VS Code / JetBrains, desktop, and web. The terminal in your clone is the simplest starting point.</span>
+- Requires a **paid Claude subscription** (Pro, Max, Team, or Enterprise) and
+  your Anthropic / claude.ai sign-in.
+- Both read the same `CLAUDE.md`, skills, and settings — your workshop behaves
+  **identically** either way.
+
+<span class="small">Downloads & docs: <b>claude.com/claude-code</b>. Check with the instructors about subscription access.</span>
 
 <!--
-This is THE tool of the workshop. Make sure everyone can launch it and see the
-greeting before Module 0. Authentication is the usual snag — sort it early.
+This is THE tool of the workshop. Whichever mode a student uses, make sure they
+can sign in and see the guide's greeting before Module 0. Subscription access
+and authentication are the usual snags — sort them early.
+-->
+
+---
+
+## Tool 3 · Claude Desktop — our default mode
+
+No terminal needed to *drive* the agent:
+
+1. **Download & install** the Claude Desktop app (macOS & Windows; Linux beta).
+2. **Sign in**, then click the **"Code"** tab.
+3. Click **"Select folder"** → choose your **cloned repo**.
+4. Type your prompt in the message box and press Enter.
+
+- You get **visual diffs** and **Accept / Reject** buttons for changes, plus a
+  pane showing the commands the agent runs.
+- It runs those commands in **your local environment**, so you still need
+  **git** (and **Python** for the example) installed on your machine.
+
+<span class="small">Clone the repo first (previous slides), then point Desktop at that folder. It reads <code>CLAUDE.md</code> and greets you.</span>
+
+<!--
+Emphasize the flow: clone first → Code tab → Select folder. The app does NOT
+sandbox — commands run locally, so git/Python must be installed (this trips up
+Windows users especially; Git for Windows is required). The CLI alternative:
+open a terminal in the clone and run `claude`. Same behavior either way.
 -->
 
 ---
@@ -257,10 +288,11 @@ The exact sequence you'll do at the start of Module 0:
 
 1. **Fork** the workshop repo (GitHub, in the browser).
 2. **Clone** *your fork* to your computer.
-3. Open a **terminal** in the clone and launch **Claude Code**.
+3. Open that folder in **Claude Desktop** (Code tab → Select folder) — or launch
+   **Claude Code** in a terminal there.
 4. It greets you and reads `PROGRESS.md` — you're in the workshop.
 
-<span class="small">Fork → clone → launch. Three steps and you've met your guide.</span>
+<span class="small">Fork → clone → open. Three steps and you've met your guide.</span>
 
 <!--
 This slide is the bridge into Module 0. If everyone can do these four steps,
@@ -279,7 +311,7 @@ python --version        # prints Python 3.x  (or: python3 --version)
 ```
 - [ ] I have a **GitHub account** and know my username.
 - [ ] I can **fork** and **clone** a repo (or know what those mean).
-- [ ] **Claude Code** launches and signs in.
+- [ ] **Claude Desktop** (or the Claude Code CLI) is installed and I can sign in.
 
 ### Next up → **Module 0: Getting Started**
 
