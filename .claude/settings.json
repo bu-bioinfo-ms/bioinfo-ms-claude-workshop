@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '%s\\n' '=== Workshop progress (PROGRESS.md) — you are the student'\\''s guide; greet them where they are ===' && cat \"$CLAUDE_PROJECT_DIR/PROGRESS.md\" 2>/dev/null || echo 'PROGRESS.md not found — offer to recreate it from the Module 0 template.'"
+          }
+        ]
+      }
+    ]
+  }
+}
