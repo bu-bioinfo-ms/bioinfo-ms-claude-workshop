@@ -1,0 +1,68 @@
+name: Deploy slides to GitHub Pages
+
+# Builds the Marp decks in docs/slides/ into a minimal Pages site (an index that
+# links to each built deck).
+#
+# HARD GATE: every job is guarded by
+#   if: github.repository == 'bu-bioinfo-ms/bioinfo-ms-claude-workshop'
+# so this only ever runs in the canonical org repo. On any fork the
+# github.repository context differs and all jobs are skipped — a fork will never
+# attempt to deploy Pages.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.repository == 'bu-bioinfo-ms/bioinfo-ms-claude-workshop'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build slide decks
+        # HTML is Marp's default output. --html allows the raw HTML the decks
+        # use (<span>, <div>, <br>). No images, so decks are self-contained
+        # (theme CSS is inlined). --input-dir + --output <dir> converts every
+        # deck, preserving names as <name>.html.
+        run: |
+          mkdir -p _site/slides
+          npx --yes @marp-team/marp-cli@latest \
+            --html \
+            --input-dir docs/slides \
+            --output _site/slides
+
+      - name: Build index page
+        run: node scripts/build-index.mjs docs/slides _site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.repository == 'bu-bioinfo-ms/bioinfo-ms-claude-workshop'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
