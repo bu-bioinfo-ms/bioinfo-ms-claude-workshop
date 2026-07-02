@@ -170,6 +170,28 @@ unable to push. Stress: clone the URL with YOUR username in it.
 
 ---
 
+## Bonus idea — Branches 🌿
+
+A **branch** is a parallel line of work — a safe place to make changes without
+touching the main version until you're ready.
+
+- Every repo has a **main** branch (the "official" version).
+- You **branch off** main to try something → commit there → **merge** it back
+  when it works. If it doesn't pan out, you just throw the branch away.
+- A **pull request (PR)** is how you propose merging a branch's changes back —
+  you'll meet these in a later module.
+
+<span class="small">Mental model: branches let you experiment on a copy of the timeline. main stays clean; your work stays isolated until it's proven.</span>
+
+<!--
+Keep this light — it's a "you'll hear this word" primer, not a git-branching
+tutorial. Module 7 covers GitHub integration and PRs properly. The goal here is
+just that "branch," "main," and "merge" aren't mystery words when they appear.
+Optionally draw it: main ──●──●──●  with a branch splitting off and merging back.
+-->
+
+---
+
 ## Tool 1 — Git installed
 
 Check whether you already have it:
