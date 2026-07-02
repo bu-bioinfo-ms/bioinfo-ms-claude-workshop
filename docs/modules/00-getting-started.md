@@ -51,6 +51,16 @@ workshop is also one of its lessons:
 - You can state, in one sentence, how you'll resume next time. (Answer: open the
   repo and say *"let's continue"* — the guide reads `PROGRESS.md`.)
 
+## Going deeper
+
+- **Presentation deck** (for the live session):
+  [`docs/slides/00-getting-started.md`](../slides/00-getting-started.md) — a
+  Marp deck covering the concept, LLM background, and the loop.
+- **Background primer:**
+  [`docs/background/llms-and-the-loop.md`](../background/llms-and-the-loop.md) —
+  what LLMs and agents are, the loop in depth, and the failure modes to watch
+  for. Read it any time; it's the "why" behind what you *do*.
+
 ## Convention added to CLAUDE.md
 
 None for this module. (Module 1 adds the first one.)

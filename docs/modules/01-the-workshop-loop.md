@@ -1,10 +1,10 @@
 # Module 1 — The workshop loop
 
 **Goal:** feel the core loop of working with an agent once, end to end, on a
-real (small) bug: **plan → act → verify → record → commit.**
+real (small) bug: **plan → act → verify → record → commit → push.**
 
 **Time:** ~40 min · **Checkpoint:** the failing test passes because a real bug
-was fixed, and the fix is committed.
+was fixed, and the fix is committed **and pushed to your fork**.
 
 ---
 
@@ -19,6 +19,10 @@ Almost everything in agentic coding is this loop:
    the output). Not "the agent said so."
 4. **Record** — write down what changed and why, somewhere durable.
 5. **Commit** — capture the unit of work with a clear message.
+6. **Push** — send the commit to your fork's remote. This is what makes your
+   progress *durable*: you can stop now and resume later from a different
+   session, machine, or a fresh clone, and nothing is lost. **A step isn't
+   finished until it's pushed.**
 
 Today you'll run this loop on a planted bug in the example project.
 
@@ -46,15 +50,17 @@ Work *with* your guide — it drives the tools; you make the calls.
 4. **Verify.** This is the heart of the module. Add (or have the guide add) a
    test that would have caught the bug — e.g. that `gc_content("atgc") == 0.5` —
    and **run it**. Green means done; red means keep going.
-5. **Record & commit.** The guide records the decision in `PROGRESS.md` and
+5. **Record, commit & push.** The guide records the decision in `PROGRESS.md`,
    makes one conventional commit, e.g.
-   `fix(gc-content): count soft-masked (lowercase) bases in GC content`.
+   `fix(gc-content): count soft-masked (lowercase) bases in GC content`, and
+   **pushes it to your fork** so the work is safe to resume from anywhere.
 
 ## Checkpoint ✅
 
 - Running the script now reports the correct GC content for `seq4_softmasked`.
 - A test that exercises lowercase input **passes** (you saw it run).
-- There's a commit whose message follows the `type(scope): summary` form.
+- There's a commit whose message follows the `type(scope): summary` form, and
+  it's **pushed to your fork** (`git status` shows nothing to push).
 
 ## Convention added to CLAUDE.md
 
@@ -64,3 +70,5 @@ Append this to the "Conventions we've adopted" section:
 >   wrong output; a fix isn't done until a test that would have caught it passes.
 > - **Conventional commits.** Commit messages use `type(scope): summary`
 >   (`fix`, `feat`, `docs`, `refactor`, `test`, `chore`).
+> - **Push after every commit.** A step isn't finished until it's pushed to your
+>   fork — that's what lets you resume from any session, machine, or fresh clone.
