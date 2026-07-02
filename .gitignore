@@ -38,6 +38,10 @@ data/
 *.h5ad
 *.rds
 
+# --- GitHub Pages / Marp build output ---
+_site/
+node_modules/
+
 # --- OS / editor ---
 .DS_Store
 Thumbs.db
