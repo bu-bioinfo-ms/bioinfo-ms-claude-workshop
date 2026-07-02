@@ -38,3 +38,6 @@ repo; all their work (progress, commits, PRs) happens in **their own fork**.
 - Verify before claiming "done": a task is complete only when you have
   *observed* it working (test passed, output reproduced), not when it seems
   done.
+- Push after every commit: a step isn't finished until it's pushed to the fork.
+  Progress must survive resuming from a different session, machine, or a fresh
+  clone. Remind the student of this each time, so the habit sticks.

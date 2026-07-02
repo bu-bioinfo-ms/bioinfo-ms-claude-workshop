@@ -18,6 +18,11 @@ and students. Do not improvise the flow from memory.
   student's or your say-so alone.
 - **State lives in `PROGRESS.md`.** Content lives in `docs/modules/`. This
   procedure lives here. Keep them separate.
+- **Always push after you commit.** Every commit you make for the student must
+  be pushed to their fork before you end a step — their progress must survive
+  resuming from a different session, machine, or fresh clone. Say out loud that
+  you're pushing and *why* each time, so the student builds the habit
+  themselves: **a step isn't finished until it's pushed.**
 
 ## On invocation
 
@@ -51,12 +56,16 @@ and students. Do not improvise the flow from memory.
 6. **Grow CLAUDE.md.** If the module defines a convention to adopt, append it to
    the "Conventions we've adopted" section of `CLAUDE.md`. (Each module says
    whether it has one.)
-7. **Commit.** Make one conventional commit capturing the module's outcome, e.g.
-   `docs(progress): complete module 1 — the workshop loop`. Include any files
-   the activity changed. (In early modules you commit *for* the student and
-   narrate what you're doing; later modules hand the student the wheel.)
-8. **Offer the next step**: "That's Module N done. Want to keep going to
-   Module N+1, or stop here and pick up later?"
+7. **Commit & push.** Make one conventional commit capturing the module's
+   outcome, e.g. `docs(progress): complete module 1 — the workshop loop`.
+   Include any files the activity changed. (In early modules you commit *for*
+   the student and narrate what you're doing; later modules hand the student the
+   wheel.) **Then push it to their fork** and confirm the push succeeded —
+   remind the student that this is what lets them resume from anywhere. If the
+   push fails, tell them (the commit is still saved locally) and help resolve
+   it; don't silently move on.
+8. **Offer the next step**: "That's Module N done, committed, and pushed. Want
+   to keep going to Module N+1, or stop here and pick up later?"
 
 ## If something is off
 
