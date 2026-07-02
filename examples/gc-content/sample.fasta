@@ -1,0 +1,8 @@
+>seq1_balanced
+ATGCATGC
+>seq2_gc_rich
+GGGGCCCC
+>seq3_at_rich
+ATATATAT
+>seq4_softmasked
+atgcATGCatgc
