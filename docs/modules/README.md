@@ -28,6 +28,8 @@ order — each builds on the last.
     to have in place *before* Module 0.
   - [`00-getting-started.md`](../slides/00-getting-started.md) — the Module 0
     session deck.
+  - [`epilogue.md`](../slides/epilogue.md) — wrap-up: habits to keep, how Claude
+    usage/rate limits work, the self-paced track, and where to get help.
 - **Background:**
   [`docs/background/llms-and-the-loop.md`](../background/llms-and-the-loop.md) —
   a self-paced primer on LLMs, agents, and the loop.
