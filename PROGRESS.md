@@ -15,7 +15,7 @@
 | # | Module | Status | Completed |
 |---|--------|--------|-----------|
 | 0 | Getting started (onboarding to the workshop) | ✅ done | 2026-07-02 |
-| 1 | The workshop loop: plan → act → verify → record → commit → push | ⬜ not started | — |
+| 1 | The workshop loop: plan → act → verify → record → commit → push | 🔄 in progress | — |
 | 2 | Choosing your model | 🔒 locked | — |
 | 3 | Steering with modes: plan vs. auto | 🔒 locked | — |
 | 4 | Project memory: CLAUDE.md & skills | 🔒 locked | — |
